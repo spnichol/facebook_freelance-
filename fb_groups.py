@@ -363,7 +363,6 @@ if group_df == "None":
             temp_group_df = temp_group_df.append(temp_df, ignore_index=False)
 
     group_df = group_df.append(temp_group_df)
-    group_df.to_csv("groups.csv", sep=",", encoding='utf-8')
 
 else:
     print "Reading groups from file."
@@ -372,7 +371,7 @@ else:
 
 print "There are a total of "+str(len(group_df))+ " profiles to scrape."
 print "Saving group information to CSV file."
-group_df.to_csv("group_members.csv", sep=",", encoding='utf-8')
+group_df.to_csv("group_members.csv", sep=",", encoding='utf-8', index=False)
 
 if profile_df != "None":
     print "Reading profiles from file."
@@ -385,5 +384,5 @@ else:
     profile_df = grab_all_profiles()
 
 print "Saving output to a CSV file."
-profile_df.to_csv("profiles.csv", sep=",", encoding='utf-8')
+profile_df.to_csv("profiles.csv", sep=",", encoding='utf-8', index=False)
 
