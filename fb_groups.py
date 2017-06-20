@@ -103,20 +103,6 @@ def get_profile_groups():
     return all_groups
 
 
-# def get_group_members(group_id):
-#     print "Using Facebook API to retrieve members of groups. This may take a second."
-#     res = get_members(group_id)
-#     group_df = pd.DataFrame.from_dict(res[1], orient='index')
-#     group_df = group_df.transpose()
-#
-#     while res[0] != "last_page":
-#         res = paginate(res[0])
-#         temp_df = pd.DataFrame.from_dict(res[1], orient='index')
-#         temp_df = temp_df.transpose()
-#         group_df = group_df.append(temp_df, ignore_index=False)
-#
-#     return group_df
-#
 
 def login(mylog, mypass):
     print "Logging into Facebook."
