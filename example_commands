@@ -1,0 +1,4 @@
+python fb_groups.py --password yourpassword --email youremail --token yourtoken 
+
+python fb_groups.py --password yourpassword --email youremail --profiles profiles.csv --member_ids groups.csv --token yourtoken 
+
